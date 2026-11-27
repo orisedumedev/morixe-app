@@ -1,0 +1,1 @@
+export { default as useAppFooter } from "./useAppFooter";

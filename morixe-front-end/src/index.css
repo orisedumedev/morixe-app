@@ -1,0 +1,70 @@
+/**
+ * @file Global Stylesheet
+ * @overview
+ * Defines global styling rules, resets, and browser‑level overrides
+ * applied across the entire application. This file establishes the
+ * design baseline before component‑scoped styles are applied.
+ *
+ * @architecture
+ * - TailwindCSS is imported first to ensure utility classes are available
+ *   globally and can be extended or overridden by custom rules below.
+ * - Root variables define typography, color scheme, and rendering behavior.
+ * - Autofill overrides ensure consistent input styling across Chrome variants.
+ *
+ * @constraints
+ * - Global styles must remain minimal to avoid unintended overrides.
+ * - Changes to autofill behavior may impact form UX across browsers.
+ *
+ * @changeManagement
+ * Any modification to root-level colors or typography requires design
+ * system approval to maintain brand consistency.
+ */
+
+@import "tailwindcss";
+
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+
+  color: #ffffff;
+  background: #0f172a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0f172a;
+}
+
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Remove Chrome autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff !important;
+
+  -webkit-box-shadow: 0 0 0px 1000px #111827 inset !important;
+
+  box-shadow: 0 0 0px 1000px #111827 inset !important;
+
+  transition: background-color 5000s ease-in-out 0s;
+}

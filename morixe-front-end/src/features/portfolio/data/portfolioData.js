@@ -1,0 +1,112 @@
+const portfolioData = {
+  summary: {
+    totalValue: 128540.82,
+    totalProfit: 18420.37,
+    dailyProfit: 1268.42,
+    dailyChange: 1.92,
+    totalAssets: 8,
+  },
+
+  allocation: [
+    {
+      asset: "BTC",
+      symbol: "BTC",
+      percentage: 42,
+      value: 53987.14,
+      color: "#F7931A",
+    },
+    {
+      asset: "ETH",
+      symbol: "ETH",
+      percentage: 24,
+      value: 30849.80,
+      color: "#627EEA",
+    },
+    {
+      asset: "SOL",
+      symbol: "SOL",
+      percentage: 12,
+      value: 15424.90,
+      color: "#14F195",
+    },
+    {
+      asset: "BNB",
+      symbol: "BNB",
+      percentage: 8,
+      value: 10283.27,
+      color: "#F3BA2F",
+    },
+    {
+      asset: "USDT",
+      symbol: "USDT",
+      percentage: 14,
+      value: 17995.71,
+      color: "#26A17B",
+    },
+  ],
+
+  performance: [
+    { date: "Mon", value: 118200 },
+    { date: "Tue", value: 120500 },
+    { date: "Wed", value: 119800 },
+    { date: "Thu", value: 122400 },
+    { date: "Fri", value: 124600 },
+    { date: "Sat", value: 126900 },
+    { date: "Sun", value: 128540 },
+  ],
+
+  assets: [
+    {
+      id: 1,
+      symbol: "BTC",
+      name: "Bitcoin",
+      holdings: 1.235,
+      price: 43714.29,
+      value: 53987.14,
+      allocation: 42,
+      pnl: 18.4,
+    },
+    {
+      id: 2,
+      symbol: "ETH",
+      name: "Ethereum",
+      holdings: 10.58,
+      price: 2915.86,
+      value: 30849.8,
+      allocation: 24,
+      pnl: 12.7,
+    },
+    {
+      id: 3,
+      symbol: "SOL",
+      name: "Solana",
+      holdings: 103.5,
+      price: 149.03,
+      value: 15424.9,
+      allocation: 12,
+      pnl: 35.2,
+    },
+    {
+      id: 4,
+      symbol: "BNB",
+      name: "BNB",
+      holdings: 16.3,
+      price: 630.88,
+      value: 10283.27,
+      allocation: 8,
+      pnl: 9.1,
+    },
+    {
+      id: 5,
+      symbol: "USDT",
+      name: "Tether",
+      holdings: 17995.71,
+      price: 1,
+      value: 17995.71,
+      allocation: 14,
+      pnl: 0,
+    },
+  ],
+};
+
+export default portfolioData;
