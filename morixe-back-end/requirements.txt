@@ -1,0 +1,139 @@
+# ============================================
+# Python Runtime
+# ============================================
+# Proven development/test runtime:
+# Python 3.10.x
+#
+# Keep Docker on python:3.10-slim until the
+# complete platform is deliberately validated
+# against Python 3.12.
+
+
+# ============================================
+# FastAPI & Web Framework
+# Phases 1, 5, 7-15
+# ============================================
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+
+# ============================================
+# Pydantic / Validation & Settings
+# Used throughout Phases 1-15
+# ============================================
+pydantic==2.13.4
+pydantic-settings==2.6.1
+
+
+# ============================================
+# Database, ORM & Migrations
+# Phases 1-15
+# ============================================
+sqlalchemy==2.0.36
+asyncpg==0.30.0
+aiosqlite==0.19.0
+alembic==1.19.0
+
+
+# ============================================
+# Redis & Celery
+# Phases 1, 4-15
+# ============================================
+redis==4.5.5
+celery==5.4.0
+flower==2.0.1
+
+
+# ============================================
+# Configuration & Utilities
+# ============================================
+python-dotenv==1.0.1
+websockets==14.1
+httpx==0.27.2
+aiohttp==3.8.5
+
+
+# ============================================
+# Security / Authentication
+# Phase 12+
+# ============================================
+PyJWT==2.13.0
+pwdlib[argon2]==0.3.1
+email-validator==2.3.0
+
+
+# ============================================
+# Testing
+# Proven regression environment
+# ============================================
+pytest==9.1.1
+pytest-asyncio==1.4.0
+
+
+# ============================================
+# Data Science & Machine Learning
+# Phases 4, 6, Analytics
+# ============================================
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.3.0
+joblib==1.3.1
+
+
+# ============================================
+# NLP & Sentiment Analysis
+# Phase 4 / AI Analysis
+# ============================================
+textblob==0.17.1
+transformers==4.30.2
+tokenizers==0.13.3
+sentencepiece==0.1.99
+
+
+# ============================================
+# Deep Learning Frameworks
+# AI / ML Infrastructure
+# ============================================
+torch==2.0.1
+tensorflow-cpu==2.16.2
+
+
+# ============================================
+# Financial / Market Data
+# ============================================
+yfinance==0.2.28
+
+
+# ============================================
+# MetaTrader 5
+# Windows Execution Host Only
+# ============================================
+#
+# MetaTrader5 integrates with the locally
+# installed MetaTrader 5 terminal.
+#
+# Install on Windows development/execution hosts.
+# Skip installation inside Linux Docker containers.
+#
+MetaTrader5==5.0.45; platform_system == "Windows"
+
+
+# ============================================
+# TA-Lib
+# OPTIONAL — NOT REQUIRED
+# ============================================
+#
+# Technical indicators are implemented using
+# Pandas in the platform.
+#
+# Do NOT add:
+#
+#   pip install ...
+#   python -m pip install ...
+#   alembic init ...
+#
+# commands to requirements.txt.
+#
+# requirements.txt must contain Python package
+# requirements only.
